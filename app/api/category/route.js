@@ -1,7 +1,7 @@
 import Category from "@/models/Category";
 
 export async function GET() {
-  const categories = await Category.find()
+  const categories = await Category.find().sort({ name: 1 })
   return Response.json(categories)
 }
 
